@@ -52,6 +52,7 @@ export default class OrdersList extends Component {
     return (
       <div>
         <h3>Logged Orders</h3>
+        <p>Refresh if order list has not been mapped.</p>
         <table className="table">
           <thead className="thead-light">
             <tr>
