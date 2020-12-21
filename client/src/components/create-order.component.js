@@ -23,7 +23,7 @@ export default class CreateOrder extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://shop-order-tracker.herokuapp.com/user')
+    axios.get('https://shop-order-tracker.herokuapp.com/user')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -74,7 +74,7 @@ export default class CreateOrder extends Component {
 
     console.log(order);
 
-    axios.post('http://shop-order-tracker.herokuapp.com/orders/add', order)
+    axios.post('https://shop-order-tracker.herokuapp.com/orders/add', order)
       .then(res => console.log(res.data));
 
     window.location = '/';
