@@ -9,7 +9,7 @@ const Orders = props => (
     <td>{props.orders.duration}</td>
     <td>{props.orders.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.orders._id}>edit</Link> | <a href="#" onClick={() => { props.deleteOrders(props.orders._id) }}>delete</a>
+      <Link to={"/edit/" + props.orders._id}>edit</Link> | <a href="#" onClick={() => { props.deleteOrders(props.orders._id) }}>delete</a>
     </td>
   </tr>
 )
