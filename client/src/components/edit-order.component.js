@@ -36,7 +36,7 @@ export default class EditOrder extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:3001/users/')
+    axios.get('http://localhost:3001/user/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
