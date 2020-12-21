@@ -19,7 +19,7 @@ app.use("/public", express.static(__dirname + "/public"));
 const usersRoute = require("./routes/users");
 const ordersRoute = require("./routes/orders");
 
-app.use("/users", usersRoute);
+app.use("/user", usersRoute);
 app.use("/orders", ordersRoute);
 
 

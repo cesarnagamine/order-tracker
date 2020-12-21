@@ -23,7 +23,7 @@ export default class CreateOrder extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/users')
+    axios.get('http://localhost:3001/user')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
