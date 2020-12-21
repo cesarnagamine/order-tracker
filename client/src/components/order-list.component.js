@@ -24,7 +24,7 @@ export default class OrdersList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/orders/')
+    axios.get('http://shop-order-tracker.herokuapp.com/orders/')
       .then(response => {
         this.setState({ orders: response.data })
       })
@@ -34,7 +34,7 @@ export default class OrdersList extends Component {
   }
 
   deleteOrders(id) {
-    axios.delete('http://localhost:3001/orders/'+id)
+    axios.delete('http://shop-order-tracker.herokuapp.com/orders/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
