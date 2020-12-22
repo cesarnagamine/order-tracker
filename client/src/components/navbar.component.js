@@ -5,7 +5,7 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
+      <nav className="navbar navbar-dark bg-success navbar-expand-lg">
         <Link to="/" className="navbar-brand">OrderTracker</Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
