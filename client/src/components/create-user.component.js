@@ -28,6 +28,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
+    // axios.post('http://localhost:3001/user/add', user)
     axios.post('https://shop-order-tracker.herokuapp.com/user/add', user)
       .then(res => console.log(res.data));
 
@@ -39,10 +40,10 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div>
-        <h3>Create New User</h3>
+        <h3>New Client</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
-            <label>Username: </label>
+            <label>Client: </label>
             <input  type="text"
                 required
                 className="form-control"
@@ -51,7 +52,7 @@ export default class CreateUser extends Component {
                 />
           </div>
           <div className="form-group">
-            <input type="submit" value="Create User" className="btn btn-primary" />
+            <input type="submit" value="Create Client" className="btn btn-primary" />
           </div>
         </form>
       </div>

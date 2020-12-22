@@ -23,6 +23,7 @@ export default class EditOrder extends Component {
   }
 
   componentDidMount() {
+    // axios.get('http://localhost:3001/orders/'+this.props.match.params.id)
     axios.get('https://shop-order-tracker.herokuapp.com/orders/'+this.props.match.params.id)
       .then(response => {
         this.setState({
@@ -36,6 +37,7 @@ export default class EditOrder extends Component {
         console.log(error);
       })
 
+    // axios.get('http://localhost:3001/user/')  
     axios.get('https://shop-order-tracker.herokuapp.com/user/')
       .then(response => {
         if (response.data.length > 0) {
@@ -86,6 +88,7 @@ export default class EditOrder extends Component {
 
     console.log(Order);
 
+    // axios.get('http://localhost:3001/orders/update/')
     axios.post('https://shop-order-tracker.herokuapp.com/orders/update/' + this.props.match.params.id, Order)
       .then(res => console.log(res.data));
 

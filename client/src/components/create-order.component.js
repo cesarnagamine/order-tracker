@@ -23,6 +23,7 @@ export default class CreateOrder extends Component {
   }
 
   componentDidMount() {
+    // axios.get('http://localhost:3001/user')
     axios.get('https://shop-order-tracker.herokuapp.com/user')
       .then(response => {
         if (response.data.length > 0) {
@@ -74,6 +75,7 @@ export default class CreateOrder extends Component {
 
     console.log(order);
 
+    // axios.post('http://localhost:3001/orders/add', order)
     axios.post('https://shop-order-tracker.herokuapp.com/orders/add', order)
       .then(res => console.log(res.data));
 
@@ -86,7 +88,7 @@ export default class CreateOrder extends Component {
       <h3>Create New Order Log</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Username: </label>
+          <label>Client: </label>
           <select ref="userInput"
               required
               className="form-control"
@@ -103,7 +105,7 @@ export default class CreateOrder extends Component {
           </select>
         </div>
         <div className="form-group"> 
-          <label>Description: </label>
+          <label>Order: </label>
           <input  type="text"
               required
               className="form-control"
@@ -112,7 +114,7 @@ export default class CreateOrder extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
+          <label>Delivery Duration (in minutes): </label>
           <input 
               type="text" 
               className="form-control"
